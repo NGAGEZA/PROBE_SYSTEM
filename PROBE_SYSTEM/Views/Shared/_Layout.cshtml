@@ -1,0 +1,100 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Meta Responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+
+    <environment include="Development">
+        <!--Bootstrap CSS-->
+        <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <!--Custom style.css-->
+        <link href="~/lib/Custom/style.css" rel="stylesheet" />
+        <!--Font Awesome-->
+        <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+        <script src="~/lib/js/sweetalert.min.js"></script>
+
+        <!--FOR IE9-->
+        <script src="~/lib/html5shiv/html5shiv.js"></script>
+        <script src="~/lib/respond.js/respond.js"></script>
+
+        <!-- tempusdominus-bootstrap-4 datetimepicker -->
+        <link rel="stylesheet" href="~/lib/datepicker/css/tempusdominus-bootstrap-4.css">
+        <!-- tempusdominus-bootstrap-4 -->
+
+
+        <link href="~/lib/XpageList/PagedList.css" rel="stylesheet" />
+        <!--Custom CSS-->
+        <link href="~/lib/CustomCss/StyleCustom.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </environment>
+
+    @await RenderSectionAsync("Styles", false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark shadow">
+            <a href="#" class="navbar-brand"><i class="fa fa-cube"></i> <b>PROBE</b> SYSTEM</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collection of nav links, forms, and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-home"></i><span>Home</span></a>
+                    <a href="#" class="nav-item nav-link"><i class="fas fa-database"></i><span>Inquiry</span></a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="~/lib/Images/Avartar_test.png" class="avatar" alt="Avatar"> User <b class="caret"></b></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item"><i class="far fa-user-circle"></i> Profile</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-wifi"></i> IP:@HttpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString()</a>
+                            <div class="divider dropdown-divider"></div>
+                            <a href="#" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <environment include="Development">
+        <!-- Page JavaScript Files-->
+
+        <script src="~/lib/jquery/jquery.slim.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+        <!--Popper JS-->
+
+
+        <script src="~/lib/popper/umd/popper.js"></script>
+        <!--Bootstrap-->
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+
+
+
+
+        <!-- tempusdominus-bootstrap-4 -->
+        @*<script src="~/lib/datepicker/jquery/jquery.js"></script>
+            <script src="~/lib/datepicker/momentjs/moment.js"></script>
+            <script src="~/lib/datepicker/js/tempusdominus-bootstrap-4.js"></script>*@
+        <!-- tempusdominus-bootstrap-4 -->
+        <!--bootstrap-select-->
+        @*<script src="~/lib/bootstrap-select/js/bootstrap-select.js"></script>*@
+    </environment>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

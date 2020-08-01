@@ -1,0 +1,274 @@
+﻿@model IEnumerable<PROBE_SYSTEM.Models.VewInvoiceInquiryModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+    <table class="table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PONo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InvoiceNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PRNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Specification)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Unit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingQTY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingUnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PODate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MakerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpecialNote)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SupplierName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChargeSectionCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChargeSectionName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Currency)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyerCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountSubNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SuspenseAccountNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LicenceNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DecisionFormNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ORGReceivingUnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ORGReceivingAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataMakingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryPlaceCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryPlaceName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliverySectionCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliverySectionName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingEntryDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OpeDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivingDate_1)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PONo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InvoiceNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PRNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemCategory)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Specification)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Unit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingQTY)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingUnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PODate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MakerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SpecialNote)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChargeSectionCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChargeSectionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Currency)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BuyerCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BuyerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountSubNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SuspenseAccountNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LicenceNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DecisionFormNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ORGReceivingUnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ORGReceivingAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataMakingDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryPlaceCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryPlaceName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliverySectionCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliverySectionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingEntryDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OpeDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivingDate_1)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PONo">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.PONo">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PONo">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
